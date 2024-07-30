@@ -3,7 +3,7 @@ exports.selectData = async (query, projection) => {
     query: query,
     projection: projection,
   };
-  const res = await fetch("/apis/v1/select-conversations", {
+  const res = await fetch("https://travel-booking-site-backend.vercel.app/apis/v1/select-conversations", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -24,7 +24,7 @@ exports.selectAllData = async (query, projection) => {
     query: query,
     projection: projection,
   };
-  const res = await fetch("/apis/v1/select-conversations-public", {
+  const res = await fetch("https://travel-booking-site-backend.vercel.app/apis/v1/select-conversations-public", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -43,7 +43,7 @@ exports.selectAllData = async (query, projection) => {
 exports.deleteData = async (id) => {
   console.log("clicked" + id);
 
-  const res = await fetch(`/apis/v1/delete-conversation/${id}`, {
+  const res = await fetch(`https://travel-booking-site-backend.vercel.app/apis/v1/delete-conversation/${id}`, {
     method: "DELETE",
     headers: {
       "Content-Type": "application/json",
@@ -76,7 +76,7 @@ exports.createData = async (
     selectedPackageID,
   };
 
-  const res = await fetch(`/apis/v1/create-conversation`, {
+  const res = await fetch(`https://travel-booking-site-backend.vercel.app/apis/v1/create-conversation`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -112,7 +112,7 @@ exports.updateData = async (
     selectedPackageID,
   };
 
-  const res = await fetch(`/apis/v1/update-conversation`, {
+  const res = await fetch(`https://travel-booking-site-backend.vercel.app/apis/v1/update-conversation`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",

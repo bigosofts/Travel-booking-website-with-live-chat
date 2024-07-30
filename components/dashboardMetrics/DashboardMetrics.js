@@ -28,7 +28,7 @@ function DashboardMetrics(props) {
       const res3 = await selectOrders(null, null);
       const res4 = await selectPosts(null, null);
       const res5 = await selectWidgets(null, null);
-
+      
       setData({
         client: res.data.length,
         instructor: res1.data.length,
@@ -42,7 +42,6 @@ function DashboardMetrics(props) {
   }, []);
 
   if (data) {
-    console.log(data);
     return (
       <div className="main-box w-full min-w-[250px] overflow-y-scroll mx-0 mx-md-5 pb-10">
         <div className="dsh-container">

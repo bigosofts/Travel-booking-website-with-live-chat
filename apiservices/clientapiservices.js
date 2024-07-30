@@ -6,7 +6,7 @@ exports.selectData = async(query, projection) => {
         query:query,
         projection:projection
     };
-    const res = await fetch('/apis/v1/select-clients', {
+    const res = await fetch('https://travel-booking-site-backend.vercel.app/apis/v1/select-clients', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ exports.selectAllData = async(query, projection) => {
         query:query,
         projection:projection
     };
-    const res = await fetch('/apis/v1/select-all-clients', {
+    const res = await fetch('https://travel-booking-site-backend.vercel.app/apis/v1/select-all-clients', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -52,7 +52,7 @@ exports.selectAllDataPublic = async(query) => {
     const payloaddata ={
         query:query
     };
-    const res = await fetch('/apis/v1/select-all-clients-public', {
+    const res = await fetch('https://travel-booking-site-backend.vercel.app/apis/v1/select-all-clients-public', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -75,7 +75,7 @@ exports.selectAllDataPublic = async(query) => {
 exports.deleteData = async(id) => {
   console.log("clicked" + id);
 
-    const res = await fetch(`/apis/v1/delete-client/${id}`, {
+    const res = await fetch(`https://travel-booking-site-backend.vercel.app/apis/v1/delete-client/${id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json' 
@@ -110,7 +110,7 @@ exports.createData = async(
         profileImage
  }
 
-  const res = await fetch(`/apis/v1/create-client`, {
+  const res = await fetch(`https://travel-booking-site-backend.vercel.app/apis/v1/create-client`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -149,7 +149,7 @@ exports.updateData = async(
     profileImage
  }
 
-  const res = await fetch(`/apis/v1/update-client`, {
+  const res = await fetch(`https://travel-booking-site-backend.vercel.app/apis/v1/update-client`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'

@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 exports.isAdmin = async () => {
-  const response = await axios.get("/apis/v1/isAdmin", {
+  const response = await axios.get("https://travel-booking-site-backend.vercel.app/apis/v1/isAdmin", {
     headers: {
       "Content-Type": "application/json",
     },
@@ -20,7 +20,7 @@ exports.clientLogin = async (userName, password) => {
     userName,
     password,
   };
-  const res = await fetch("/apis/v1/client-login", {
+  const res = await fetch("https://travel-booking-site-backend.vercel.app/apis/v1/client-login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -41,7 +41,7 @@ exports.instructorLogin = async (userName, password) => {
     userName,
     password,
   };
-  const res = await fetch("/apis/v1/instructor-login", {
+  const res = await fetch("https://travel-booking-site-backend.vercel.app/apis/v1/instructor-login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -58,7 +58,7 @@ exports.instructorLogin = async (userName, password) => {
 };
 
 exports.logout = async () => {
-  const res = await fetch("/apis/v1/logout", {
+  const res = await fetch("https://travel-booking-site-backend.vercel.app/apis/v1/logout", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
